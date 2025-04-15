@@ -7,7 +7,11 @@ import { CustomSliderComponent } from './custom-slider/custom-slider.component';
   selector: 'app-root',
   template: `
     <app-user-profile></app-user-profile>
-    <custom-slider [value]="30"></custom-slider>
+    <custom-slider
+      [value]="30"
+      [labelString]="'   O Valor recebido é   '"
+      [widthPx]="200"
+    ></custom-slider>
     <!-- aqui! -->
   `,
   imports: [UserProfileComponent, CustomSliderComponent],
