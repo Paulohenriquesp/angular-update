@@ -3,28 +3,19 @@ import { RouterOutlet } from '@angular/router';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CustomSliderComponent } from './custom-slider/custom-slider.component';
 import { ExpandablePanelComponent } from './expandable-panel/expandable-panel.component';
+import { CustomCardComponent } from './custom-card/custom-card.component';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <app-user-profile></app-user-profile>
-    <custom-slider
-      [value]="30"
-      [labelString]="'   O Valor recebido é   '"
-      [widthPx]="200"
-    ></custom-slider>
-    <expandable-panel
-      (painelFechado)="salvarEstado($event)"
-      (mensagemEnviada)="salvarEstado($event)"
-    ></expandable-panel>
-  `,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  standalone: true,
   imports: [
     UserProfileComponent,
     CustomSliderComponent,
     ExpandablePanelComponent,
+    CustomCardComponent,
   ],
-  standalone: true,
-  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'first-app - meu primeiro app em angular!';

@@ -1,1 +1,11 @@
-{{ title }}
+<app-user-profile></app-user-profile>
+<custom-slider
+  [value]="30"
+  [labelString]="'   O Valor recebido é   '"
+  [widthPx]="200"
+></custom-slider>
+<expandable-panel
+  (painelFechado)="salvarEstado($event)"
+  (mensagemEnviada)="salvarEstado($event)"
+></expandable-panel>
+<custom-card></custom-card>
