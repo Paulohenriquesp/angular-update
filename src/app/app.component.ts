@@ -4,6 +4,7 @@ import { CustomSliderComponent } from './custom-slider/custom-slider.component';
 import { ExpandablePanelComponent } from './expandable-panel/expandable-panel.component';
 import { CustomCardComponent } from './custom-card/custom-card.component';
 import { HightlightBoxComponent } from './hightlight-box/hightlight-box.component';
+import { ProfilePhotoComponent } from './profile-photo/profile-photo.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { HightlightBoxComponent } from './hightlight-box/hightlight-box.componen
     ExpandablePanelComponent,
     CustomCardComponent,
     HightlightBoxComponent,
+    ProfilePhotoComponent,
   ],
 })
 export class AppComponent {
