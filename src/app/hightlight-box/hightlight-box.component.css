@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+:host(.highlighted) {
+  border-color: #42a5f5;
+}
