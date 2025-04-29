@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CustomSliderComponent } from './custom-slider/custom-slider.component';
 import { ExpandablePanelComponent } from './expandable-panel/expandable-panel.component';

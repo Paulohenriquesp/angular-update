@@ -15,7 +15,7 @@ import {
 @Component({
   selector: 'app-lifecycle-logger',
   standalone: true,
-  template: `<p>Lifecycle Logger works! Nome: {{ name }}</p>`,
+  template: `<p>Nome: {{ name }}</p>`,
   styleUrl: './lifecycle-logger.component.css',
 })
 export class LifecycleLoggerComponent
