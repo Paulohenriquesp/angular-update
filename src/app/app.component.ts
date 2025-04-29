@@ -5,6 +5,8 @@ import { ExpandablePanelComponent } from './expandable-panel/expandable-panel.co
 import { CustomCardComponent } from './custom-card/custom-card.component';
 import { HightlightBoxComponent } from './hightlight-box/hightlight-box.component';
 import { ProfilePhotoComponent } from './profile-photo/profile-photo.component';
+import { LifecycleLoggerComponent } from './lifecycle-logger/lifecycle-logger.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +14,14 @@ import { ProfilePhotoComponent } from './profile-photo/profile-photo.component';
   styleUrl: './app.component.css',
   standalone: true,
   imports: [
+    CommonModule,
     UserProfileComponent,
     CustomSliderComponent,
     ExpandablePanelComponent,
     CustomCardComponent,
     HightlightBoxComponent,
     ProfilePhotoComponent,
+    LifecycleLoggerComponent,
   ],
 })
 export class AppComponent {
@@ -27,5 +31,16 @@ export class AppComponent {
   salvarEstado(event: any) {
     console.log('Estado recebido do filho:', event);
     // aqui você pode salvar no backend, estado local, ou apenas logar mesmo
+  }
+
+  userName = 'João';
+  showLogger = true;
+
+  changeName() {
+    this.userName = 'Maria ' + Math.floor(Math.random() * 100);
+  }
+
+  destroyComponent() {
+    this.showLogger = false;
   }
 }

@@ -15,3 +15,10 @@
   [ids]="'profiles-2222'"
   [id]="'profile-1111'"
 ></profile-photo>
+
+<div *ngIf="showLogger">
+  <app-lifecycle-logger [name]="userName"></app-lifecycle-logger>
+</div>
+
+<button (click)="changeName()">Trocar Nome</button>
+<button (click)="destroyComponent()">Destruir Componente</button>

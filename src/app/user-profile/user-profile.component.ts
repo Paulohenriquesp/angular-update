@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, computed, effect, signal } from '@angular/core';
 
 @Component({
@@ -19,6 +20,7 @@ import { Component, computed, effect, signal } from '@angular/core';
     <p>{{ trialStatus() }}</p>
     <p *ngIf="showTrialDuration()">"</p>
   `,
+  imports: [CommonModule],
   styles: `h1 { font-size: 3em; } `,
 })
 export class UserProfileComponent {
